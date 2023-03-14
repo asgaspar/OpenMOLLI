@@ -1,36 +1,36 @@
-#   <div align="center">  ProMyoT1 </div>
+#   <div align="center">  Open-MOLLI </div>
 ##  <div align="center"> Open-source Inversion recovery myocardial T1 mapping sequence
 
 <div align="justify"> Quantitative MR methods require reproducibility studies to evaluate their accuracy and precision which can be difficult when MR sequences can vary between centers and scanners. In addition, faster prototyping for concept testing and improvement is challenging and time consuming.</div>
 
 <br/>
 
-This package offers an open-source Prototype of Myocardial T1 mapping (ProMyoT1) using Pulseq [[1,2]](#references) which includes an inversion recovery T1 mapping sequence with a triggering scheme. ProMyoT1 accessibility allows faster implementation of new ideas, while its applicability to different vendors though Pulseq versatility makes it an easier route for reproducibility studies. 
+This package offers an open-source Prototype of Myocardial T1 mapping (Open-MOLLI) using Pulseq [[1,2]](#references) which includes an inversion recovery T1 mapping sequence with a triggering scheme. Open-MOLLI accessibility allows faster implementation of new ideas, while its applicability to different vendors though Pulseq versatility makes it an easier route for reproducibility studies. 
 
 
 <p align="center">
-<img src="ProMyoT1_arial.png"/>
+<img src="OpenMOLLI_arial.png"/>
 </p>
 
 <br/>
 
-If you use the sequence ProMyoT1 in your work, cite as:
+If you use the sequence Open-MOLLI in your work, cite as:
 
 ```
 Andreia S Gaspar, Nuno A Silva, Rita G Nunes. "ProMyoT1: Open-source Inversion recovery myocardial T1 mapping sequence for fast prototyping” Proc. of Annual Meeting ISMRM 2021, Virtual Meeting, 2021.
 ```
 
 ## Packages
-ProMyoT1 can be build with Matlab or Python: 
+Open-MOLLI can be build with Matlab or Python: 
 *  **Matlab**: 
-	* **ProMyoT1**  can be build from code in Matlab_ProMyoT1 folder. Files in mr+ folder should be added Pulseq mr+ folder. 
+	* **Open-MOLLI**  can be build from code in Matlab_Open-MOLLI folder. Files in mr+ folder should be added Pulseq mr+ folder. 
 * **Python**:  
-	* **PyProMyoT1** can be build from code in Python_pyProMyoT1 folder. This requires pypulseq [[2]](#references) . 
-	* A tutorial notebook for pyProMyoT1 is available at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ANG13/ProMyoT1/blob/main/PyProMyoT1_Python/pyProMyoT1.ipynb)
+	* **PyOpen-MOLLI** can be build from code in Python_pyOpen-MOLLI folder. This requires pypulseq [[2]](#references) . 
+	* A tutorial notebook for pyOpen-MOLLI is available at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/asgaspar/OpenMOLLI/blob/main/PyOpenMOLLI_Python/pyOpenMOLLI.ipynb)
 
 
 ## Requirements
-In order to create a `ProMyoT1.seq` file you will need: 
+In order to create a `Open-MOLLI.seq` file you will need: 
 *  **Matlab**:  **Pulseq** package available at: https://github.com/pulseq/pulseq
 *   **Python**:  
 	* **pyPulseq** [[2]](#references)  package available at: https://github.com/imr-framework/pypulseq 

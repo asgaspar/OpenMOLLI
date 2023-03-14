@@ -9,7 +9,7 @@ revision 0
 [DEFINITIONS]
 FOV 0.2 0.2 0.006 
 Inversion times 0.23625     0.31625 
-Name ProMyoT1_Linear_11RF_FOV200x200_res1.56x1.56x6 
+Name OpenMOLLI_Linear_11RF_FOV200x200_res1.56x1.56x6 
 TotalDuration 9.32616 
 
 # Format of blocks:
