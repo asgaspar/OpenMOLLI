@@ -126,7 +126,20 @@ def bssfp_readout(seq, system, fov=200e-3, Nstartup=11, Ny=128):
                    g_ss_reph.rise_time + g_ss_reph.flat_time + g_ss_reph.fall_time + calc_duration(g_ro)
                    + 2 * calc_duration(g_ro_pre) - 2 * calc_duration(
                        g_ss_reph) + 1e-5 + g_ss_reph.rise_time + g_ss_reph.flat_time + g_ss_reph.fall_time]
-    gzrep_amp = [0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0, 0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0]
+    #gzrep_amp = [0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0, 0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0]
+	if g_ss_reph.flat_time==0: 
+      gzrep_times = [0, g_ss_reph.rise_time,
+                   g_ss_reph.rise_time + g_ss_reph.fall_time,
+                   g_ss_reph.rise_time + g_ss_reph.fall_time + calc_duration(g_ro) 
+                   + 2*calc_duration(g_ro_pre) - 2*calc_duration(g_ss_reph) + 1e-5,
+                   g_ss_reph.rise_time + g_ss_reph.fall_time + calc_duration(g_ro) 
+                   + 2*calc_duration(g_ro_pre) - 2*calc_duration(g_ss_reph)  + 1e-5 + g_ss_reph.rise_time,
+                   g_ss_reph.rise_time + g_ss_reph.fall_time + calc_duration(g_ro) 
+                   + 2*calc_duration(g_ro_pre) - 2*calc_duration(g_ss_reph) + 1e-5 + g_ss_reph.rise_time+ g_ss_reph.fall_time]
+      gzrep_amp = [0, g_ss_reph.amplitude, 0, 0, g_ss_reph.amplitude, 0]
+    else: 
+      gzrep_amp = [0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0, 0, g_ss_reph.amplitude, g_ss_reph.amplitude, 0]
+	  
     gzrep_all = make_extended_trapezoid(channel=enc[2], times=gzrep_times, amplitudes=gzrep_amp)
 
     adc.delay = g_ro_pre.rise_time + g_ro_pre.flat_time + g_ro_pre.fall_time + g_ro.rise_time + 0.5e-5
@@ -297,7 +310,8 @@ def make_hyperSec_pulse(system: Opts = Opts(), duration: float = 0, freq_offset:
     rf_inv.dead_time = system.rf_dead_time
     rf_inv.ringdown_time = system.rf_ringdown_time
     rf_inv.delay = delay
-
+	rf_inv.shape_dur = duration #update to new pypulseq version
+	
     if rf_inv.dead_time > rf_inv.delay:
         rf_inv.delay = rf_inv.dead_time
 
