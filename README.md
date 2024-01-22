@@ -36,6 +36,12 @@ In order to create a `Open-MOLLI.seq` file you will need:
 	* **pyPulseq** [[2]](#references)  package available at: https://github.com/imr-framework/pypulseq 
 	* You can also install with `pip install pypulseq`
 
+## Utilities Reconstruction
+In order to use the reconstruction utilities from repository https://github.com/fluese/reconstructionPipeline/
+*  Read *.dat:  **mapVBVD** package available at: https://github.com/fluese/reconstructionPipeline/tree/master/externalTools/mapVBVD
+*  GRAPPA:   **GRAPPA** available at: https://github.com/fluese/reconstructionPipeline/tree/master/externalTools/GRAPPA
+*  Filter:   **Tukey** available at: https://github.com/fluese/reconstructionPipeline/blob/master/processingPipeline/window3_tukeytaper.m
+
 
 ## References
 1. Layton KJ, Kroboth S, Jia F, Littin S, Yu H, Leupold J, Nielsen JF, Stöcker T and Zaitsev M. Pulseq: A rapid and hardware‐independent pulse sequence prototyping framework. Magn Reson Med. 2017;77:1544-1552. https://doi.org/10.1002/mrm.26235
