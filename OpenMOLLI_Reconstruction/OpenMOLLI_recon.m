@@ -160,6 +160,8 @@ for iInv=1:nContrast
     
 end
 
+phase = angle(sum( image_recon_coils_sets, 1)/nCoils);
+imspace_PSIR = sign(squeeze(phase)).*squeeze(sos_grappa); 
 
 sos_rotated_one = cat(1, zeros(1,Ny_fs+74, nContrast),sos_rotated);
 sos_rotated_two = cat(2, zeros(Nx,1, nContrast), sos_rotated_one(1:Nx, :,:));
@@ -204,6 +206,6 @@ TI_Vector_real = seq.getDefinition('Inversion');
 
 %% ************************************************************************
 %                              T1 estimation   
-Param_map_PSI = generate_map_pulseq(sos_final, Time_vector);
+Param_map_PSI = generate_map_pulseq(imspace_PSIR, Time_vector);
 
 
