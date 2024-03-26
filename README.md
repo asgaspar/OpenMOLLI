@@ -17,7 +17,7 @@ This package offers an open-source Prototype of Myocardial T1 mapping (Open-MOLL
 If you use the sequence Open-MOLLI in your work, cite as:
 
 ```
-Andreia S Gaspar, Nuno A Silva, Rita G Nunes. "ProMyoT1: Open-source Inversion recovery myocardial T1 mapping sequence for fast prototyping” Proc. of Annual Meeting ISMRM 2021, Virtual Meeting, 2021.
+Gaspar AS, Silva NA, Ferreira AM, Nunes RG. Repeatability of Open-MOLLI: An open-source inversion recovery myocardial T1 mapping sequence for fast prototyping. Magn Reson Med. 2024; 1-10. doi: 10.1002/mrm.30080.
 ```
 
 ## Packages
